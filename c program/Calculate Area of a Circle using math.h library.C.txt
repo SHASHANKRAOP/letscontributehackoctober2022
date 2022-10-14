@@ -1,0 +1,14 @@
+#include < stdio.h >  
+#include < math.h >  
+  
+int main()  
+{  
+    float radius;  
+  
+    printf("Enter radius of circle\n");  
+    scanf("%f", &radius);  
+  
+    printf("Area of circle is %f \n", (M_PI * pow(radius, 2)));  
+  
+    return 0;  
+} 
