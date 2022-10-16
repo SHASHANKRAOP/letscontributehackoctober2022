@@ -4,7 +4,7 @@
   
 int main()  
 {  
-    int a[N], i, small, pos;  
+    int a[N], i, small;  
   
     printf("Enter %d integer numbers\n", N);  
     for(i = 0; i < N; i++)  
@@ -13,12 +13,11 @@ int main()
   
         if(i == 0 || small > a[i])  
         {  
-            small = a[i];  
-            pos   = i + 1;  
+            small = a[i];    
         }  
     }  
   
-    printf("Smallest Number: %d, at position %d.\n", small, pos);  
+    printf("Smallest Number: %d\n", small);  
   
     return 0;  
 }
