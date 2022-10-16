@@ -9,7 +9,8 @@ void CocktailSort(int a[], int n)
 	int start = 0;
 	int end = n - 1;
 
-	while (swapped) {
+	while (swapped)
+	{
 		// reset the swapped flag on entering
 		// the loop, because it might be true from
 		// a previous iteration.
@@ -17,8 +18,10 @@ void CocktailSort(int a[], int n)
 
 		// loop from left to right same as
 		// the bubble sort
-		for (int i = start; i < end; ++i) {
-			if (a[i] > a[i + 1]) {
+		for (int i = start; i < end; ++i)
+		{
+			if (a[i] > a[i + 1])
+			{
 				swap(a[i], a[i + 1]);
 				swapped = true;
 			}
@@ -38,8 +41,10 @@ void CocktailSort(int a[], int n)
 
 		// from right to left, doing the
 		// same comparison as in the previous stage
-		for (int i = end - 1; i >= start; --i) {
-			if (a[i] > a[i + 1]) {
+		for (int i = end - 1; i >= start; --i)
+		{
+			if (a[i] > a[i + 1])
+			{
 				swap(a[i], a[i + 1]);
 				swapped = true;
 			}
@@ -63,7 +68,7 @@ void printArray(int a[], int n)
 // Driver code
 int main()
 {
-	int a[] = { 5, 1, 4, 2, 8, 0, 2 };
+	int a[] = {5, 1, 4, 2, 8, 0, 2};
 	int n = sizeof(a) / sizeof(a[0]);
 	CocktailSort(a, n);
 	printf("Sorted array :\n");
