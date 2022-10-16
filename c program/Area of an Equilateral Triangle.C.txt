@@ -3,16 +3,16 @@
   
 int main()  
 {  
-    float sides, area, p;  
+    double sides, area, p;  
   
     printf("Enter value for side of Equilateral Triangle\n");  
-    scanf("%f", &sides);  
+    scanf("%lf", &sides);  
   
     p    = 3 * sides;  
     area = ( (sqrt(3)/4) * pow(sides, 2) );  
   
-    printf("Perimeter is %f\n", p);  
-    printf("Area is %f\n", area);  
+    printf("Perimeter is %lf\n", p);  
+    printf("Area is %.2lf\n", area);  
   
     return 0;  
 }
