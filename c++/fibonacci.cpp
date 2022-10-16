@@ -10,7 +10,7 @@ int main()  //Main Function
 cout<<"Enter number of terms you want in fibonacci: ";
 cin>>a;
 cout<<"The fibonacci series is:"<<endl;
-for(int i=0;i<a;i++)
+for(int i=1;i<=a;i++)
 { cout<<fibonacci(i)<<",";
 }
 return 0;
