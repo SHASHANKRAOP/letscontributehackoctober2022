@@ -1,23 +1,18 @@
-#include < stdio.h >  
-  
-int main()  
-{  
-    int num1, num2, lcm, fact =1;  
-  
-    printf("Enter 2 numbers\n");  
-    scanf("%d%d", &num1, &num2);  
-  
-    lcm = (num1 > num2) ? num1 : num2;  
-  
-    while(fact)  
-    {  
-        if(lcm % num1 == 0 && lcm % num2 == 0)  
-        {  
-            printf("LCM of %d and %d is %d\n", num1, num2, lcm);  
-            fact = 0;  
-        }  
-        lcm++;  
-    }  
-  
-    return 0;  
+#include <stdio.h>
+int main() 
+{
+    int n1,n2,max;
+    printf("Enter two positive integers:");
+    scanf("%d %d",&n1,&n2);
+    max = (n1>n2)?n1:n2;
+    while (1) 
+    {
+        if((max %n1==0)&&(max%n2==0)) 
+        {
+            printf("The LCM of %d and %d is %d.", n1, n2, max);
+            break;
+        }
+        ++max;
+    }
+    return 0;
 }
