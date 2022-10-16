@@ -1,32 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Stack {
+class Stack
+{
 public:
 	int top;
 	unsigned capacity;
-	char* array;
+	char *array;
 };
-Stack* createStack(unsigned capacity)
+Stack *createStack(unsigned capacity)
 {
-	Stack* stack = new Stack();
+	Stack *stack = new Stack();
 	stack->capacity = capacity;
 	stack->top = -1;
-	stack->array
-		= new char[(stack->capacity * sizeof(char))];
+	stack->array = new char[(stack->capacity * sizeof(char))];
 	return stack;
 }
-int isFull(Stack* stack)
+int isFull(Stack *stack)
 {
 	return stack->top == stack->capacity - 1;
 }
-int isEmpty(Stack* stack) { return stack->top == -1; }
-void push(Stack* stack, char item)
+int isEmpty(Stack *stack) { return stack->top == -1; }
+void push(Stack *stack, char item)
 {
 	if (isFull(stack))
 		return;
 	stack->array[++stack->top] = item;
 }
-char pop(Stack* stack)
+char pop(Stack *stack)
 {
 	if (isEmpty(stack))
 		return -1;
@@ -35,7 +35,7 @@ char pop(Stack* stack)
 void reverse(char str[])
 {
 	int n = strlen(str);
-	Stack* stack = createStack(n);
+	Stack *stack = createStack(n);
 	int i;
 	for (i = 0; i < n; i++)
 		push(stack, str[i]);
@@ -45,9 +45,9 @@ void reverse(char str[])
 int main()
 {
 	char str[] = "Akhilesh";
-
+	cout << "[*] Original string is: " << str << endl;
 	reverse(str);
-	cout << "Reversed string is " << str;
+	cout << "[+] Reversed string is: " << str << endl;
 
 	return 0;
 }
