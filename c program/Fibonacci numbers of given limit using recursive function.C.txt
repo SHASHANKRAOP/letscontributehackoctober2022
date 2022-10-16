@@ -1,0 +1,18 @@
+//Fibonacci numbers of given limit using recursive function
+#include <stdio.h>
+int fib(int i)
+{
+    if(i<=1)
+    return i;
+    else
+    return(fib(i-1)+fib(i-2));
+}
+void main()
+{
+    int i,n;
+    printf("Enter a number\n");
+    scanf("%d",&n);
+    printf("Fibonacci numbers are\n");
+    for(i=0;i<n;i++)
+    printf("%d\t",fib(i));
+}
