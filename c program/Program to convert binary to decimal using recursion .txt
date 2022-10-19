@@ -1,0 +1,15 @@
+#include <stdio.h>
+int dec(int bin)
+{
+ if (bin==0)
+ return 0;
+ else
+ return (bin % 10 +dec(bin / 10)*2);
+}
+void main()
+{
+ int bin;
+ printf("Enter a binary number\n");
+ scanf("%d", &bin);
+ printf("The decimal equivalent of %d is %d\n", bin, dec(bin));
+}
