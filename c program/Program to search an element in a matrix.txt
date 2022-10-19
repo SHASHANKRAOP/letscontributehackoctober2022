@@ -1,0 +1,26 @@
+//Program to find an element in an matrice
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int a[10][10],i,j,m,n,key;
+    printf("Enter the number of rows and coloumns\n");
+    scanf("%d%d",&m,&n);
+    printf("Enter the values for the matrice\n");
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter the element to be searched\n");
+    scanf("%d",&key);
+    if(a[i][j]=key)
+    {
+        printf("Search is succesfull \n");
+        exit(0);
+    }
+    else 
+    printf("Element not found\n");
+}
