@@ -1,0 +1,17 @@
+#include<stdio.h>  
+  
+int main()  
+{  
+    int limit, count;  
+  
+    printf("Enter the limit\n");  
+    scanf("%d", &limit);  
+  
+    for(count = 1; count <= limit; count++)  
+    {  
+        printf("%d + ", (count*count));  
+    }  
+    printf("\n");  
+  
+    return 0;  
+}
