@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int a[3][5],sum=0,i,b[3][5],n=5,j,k=3;
+    float sgpa;
+    printf("21MAT11=");
+    scanf("%d",&a[0][0]);
+    printf("21PHY12=");
+    scanf("%d",&a[0][1]);
+    printf("21ELE13=");
+    scanf("%d",&a[0][2]);
+    printf("21CIV14=");
+    scanf("%d",&a[0][3]);
+    printf("21EV15=");
+    scanf("%d",&a[0][4]);
+    printf("21PHYL16=");
+    scanf("%d",&a[1][0]);
+    printf("21ELEL17=");
+    scanf("%d",&a[1][1]);
+    printf("21EGH18=");
+    scanf("%d",&a[2][0]);
+    printf("21IDT19=");
+    scanf("%d",&a[1][2]);
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(i==2)
+                k=2;
+            if(a[i][j]>100)
+            {
+                printf("Invalid Mark \nTry Again");
+                exit(0);
+            }
+            b[i][j]=a[i][j];
+            switch(a[i][j]/10)
+            {
+            case 10:
+                sum=sum+10*k;
+                break;
+            case 9:
+                sum=sum+10*k;
+                break;
+            case 8:
+                sum=sum+9*k;
+                break;
+            case 7:
+                sum=sum+8*k;
+                break;
+            case 6:
+                sum=sum+7*k;
+                break;
+            case 5:
+                if(b[i][j]>=55)
+                {
+                    sum=sum+6*k;
+                }
+                else
+                {
+                    sum=sum+5*k;
+                }
+                break;
+            case 4:
+                sum=sum+4*k;
+                break;
+            default :
+                sum=sum+0;
+            }
+        }
+        n-=2;
+        k-=2;
+    }
+    sgpa=(float)sum/20;
+} 
