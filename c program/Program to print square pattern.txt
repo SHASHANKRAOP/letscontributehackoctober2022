@@ -1,0 +1,38 @@
+#include<stdio.h>
+void main()
+{
+    int l, h,i,j,k,t,m;
+    printf("Enter length\n");
+    scanf("%d",&l);
+    printf("Enter height\n");
+    scanf("%d",&h);
+    for(i=0;i<l;i++)
+    {
+        printf("* ");
+    }
+    printf("\n");
+    for(k=1;k<h-1;k++)
+    {
+        for(j=0;j<2*l-1;j++)
+        {
+            if(j==0)
+            {
+                printf("*");
+            }
+            else if(j<=l*2-3)
+                {
+                    printf(" ");
+                }
+            else
+                {
+                    printf("*");
+                }
+            
+        }
+    printf("\n");
+    }
+    for(t=0;t<l;t++)
+    {
+        printf("* ");
+    }
+}
