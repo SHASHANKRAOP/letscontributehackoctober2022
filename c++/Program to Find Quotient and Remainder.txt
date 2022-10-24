@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int main()
+void main()
 {    
     int divisor, dividend, quotient, remainder;
 
@@ -17,5 +17,5 @@ int main()
     cout << "Quotient = " << quotient << endl;
     cout << "Remainder = " << remainder;
 
-    return 0;
+    
 }
