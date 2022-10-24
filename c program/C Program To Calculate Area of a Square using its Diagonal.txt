@@ -1,6 +1,6 @@
  #include < stdio.h >  
   
-int main()  
+void main()  
 {  
     float area, diagonal;  
   
@@ -11,6 +11,6 @@ int main()
   
     printf("Area of the Square is %0.2f\n", area);  
   
-    return 0;  
+    
 }
   
