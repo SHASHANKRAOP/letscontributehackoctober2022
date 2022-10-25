@@ -1,8 +1,7 @@
 // Sum of Natural Numbers using loop
 #include<iostream>
 using namespace std;
-
-int main() 
+void main() 
 {
     int n, sum = 0;
 
@@ -15,5 +14,5 @@ int main()
     }
 
     cout << "Sum = " << sum;
-    return 0;
+    
 }
