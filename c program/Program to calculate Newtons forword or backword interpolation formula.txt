@@ -1,0 +1,57 @@
+#include<stdio.h>
+void main()
+{
+    float y0, y[10][10], xi, x[10], r, h, term=0, de=1, nu=1;
+    int i, j, k, n, uk;
+    char ch;
+    printf("Type f if NF / type b if NB interpolation\n");
+    scanf("%c",&ch);
+    printf("Enter the value of x at which y to be calculated\n");
+    scanf("%f",&xi);
+    printf("Enter number of elements\n");
+    scanf("%d",&n);
+    printf("Enter x values\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&x[i]);
+    }
+    printf("Enter y values\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&y[0][i]);
+    }
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-i-1;j++)
+            y[i+1][j]=y[i][j+1]-y[i][j];
+    }
+    h=x[1]-x[0];
+    if(ch=='f')
+        r=(xi- x[0])/h;
+    else
+        r=(xi- x[n-1])/h;
+    for(j=0;j<n;j++)
+        {
+            de=de*(j+1);
+            nu=1;
+            for(k=0;k<j+1;k++)
+            {
+                if(ch=='f')
+                    nu=nu*(r-k);
+                else
+                    nu=nu*(r+k);
+            }
+            if(ch=='f')
+                term=term+(nu/de)*y[j+1][0];
+            else
+                term=term+(nu/de)*y[j+1][n-j-2];
+            }
+    if(ch=='f')
+        term=term+y[0][0];
+    else
+        term=term+y[0][n-1];
+    if(ch=='f')
+        printf("NFIF=%f\n",term);
+    else
+	printf("NBIF=%f\n",term);
+}
