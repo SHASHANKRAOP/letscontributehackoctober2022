@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+  int i;
+  float n, x;
+  printf("Enter a number\n");
+  scanf("%f",&n);
+  x=n;
+  if(n<0)
+  {
+     printf("The square root is not possible\n");
+  }
+  else 
+  {
+     for(i=0;i<10;i++) // Newton Raphson Method
+  {
+        x=(x*x+n)/(2*x);
+  }
+  printf("The square root is %f\n", x);
+ }
+}
