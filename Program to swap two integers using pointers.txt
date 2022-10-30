@@ -1,0 +1,16 @@
+#include<stdio.h>
+void swap(int *m, int *n)
+{ 
+ int p;
+ p=*m;
+ *m=*n;
+ *n=p;
+} 
+void main()
+{
+ int a, b;
+ printf("Enter two integers\n");
+ scanf("%d%d",&a,&b);
+ swap(&a, &b);
+ printf("a=%d\tb=%d",a,b);
+}
